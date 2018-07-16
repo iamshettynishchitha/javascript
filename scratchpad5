@@ -1,0 +1,37 @@
+/*
+ * This is a JavaScript Scratchpad.
+ *
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
+
+function isPrime(num){
+ var flag = true;
+  if(num < 2)
+    flag = false;
+  for(var i = 2; i <= Math.sqrt(num); i++){
+    if(num % i == 0){
+      flag = false;
+      break;
+    }
+  }
+  return flag;
+}
+function generatePrime(num1){
+ var count = 0;
+  for(var i = 1; ; i++){
+    if(isPrime(i)){
+      count ++;
+      console.log(i);
+    }
+    if(count == num1)
+      break;
+  }
+}
+generatePrime(100);
+/*
+Exception: SyntaxError: missing ; after for-loop condition
+@Scratchpad/1:24
+*/
