@@ -1,0 +1,52 @@
+/*
+ * This is a JavaScript Scratchpad.
+ *
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
+
+function getMaxElement( arr){
+  var max = arr[0];
+  for(var i = 1; i < arr.length; i++){
+    if(arr[i] > max){
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+function getMinElement(arr){
+  var min = arr[0];
+  for(var i = 1; i < arr.length; i++){
+    if(arr[i] < min){
+      min = arr[i];
+    }
+  }
+  return min; 
+}
+function getSumOfElement(arr){
+  sum = 0;
+  for(var i = 0; i < arr.length; i++){
+    sum += arr[i];
+  }
+  return sum; 
+}
+function getAverageOfElement(arr){
+  var sum = getSumOfElement(arr);
+   var  avg = sum/arr.length; 
+  return avg;
+ 
+}
+var arr = [15,12,5,8,2,19,26,4];
+console.log(getMaxElement(arr));
+console.log(getMinElement(arr));
+console.log(getSumOfElement(arr));
+console.log(getAverageOfElement(arr));
+
+
+/*
+Exception: SyntaxError: missing formal parameter
+@Scratchpad/3:10
+*/
