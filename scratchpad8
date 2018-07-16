@@ -1,0 +1,26 @@
+/*
+ * This is a JavaScript Scratchpad.
+ *
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
+
+function searchElement(arr, ele){
+  for(var i = 0;i < arr.length;i++){
+    if(arr[i] == ele){
+      return true;
+    }
+  }
+  return false;
+}
+function searchElements(arr,e1,e2,e3){
+  if(searchElement(arr,e1) && searchElement(arr,e2) && searchElement(arr,e3)){
+    return true;
+  }
+  return false;
+}
+var arr = [ 31,32,54,65,245,45];
+console.log(searchElement(arr,32));
+console.log(searchElement(arr,62,74,2));
